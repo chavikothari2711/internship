@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initialscale=1" />
+  <title>Art By Threads</title>
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--icon -->
+  <link rel="icon" href="images/favicon.png">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+  <!-- javascript -->
+  <script type="text/javascript" src="index.js">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
+</head>
+  <body>
+    <!-- header -->
+    <section class="container-fluid" id="title">
+          <nav class="navbar navbar-expand-lg nav-text-colour navbar-light">
+            <a class="navbar-brand" href=""><img class="w-title logo" src="images/Logo.png" alt=""></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse navigation-bar" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link nav-text-colour" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-text-colour" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-text-colour" href="#contact">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link nav-text-colour" href="Shop.html">Shop</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link nav-text-colour" href="#" onclick="show('signup')">Sign Up/Log In</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+
+    <!-- signup -->
+    <div class="popup" id="signup">
+      <i class="fas fa-times-circle" onclick="hide('signup')"></i><br />
+      <h1 class="pop-heading" >Sign Up</h1>
+      <form class="pop-form-signup" action="index.html" method="post">
+        <label for="fname">First Name: </label>
+        <input type="text" id="fname" name="fname" value="" placeholder="First Name" required align="right"><br />
+
+        <label for="lname">Last Name: </label>
+        <input type="text" id="lname" name="lname" value="" placeholder="Last Name" required align="right"><br />
+
+        <label for="email">Email id: </label>
+        <input type="email" id="signemail" name="email" value="" placeholder="abc@gmail.com" required align="right"><br />
+
+        <label for="password">Password: </label>
+        <input type="password" id="signpass" name="password" value="" required align="right"><br />
+
+        <div class="button-submit">
+          <button class="btn-signup" type="submit" > Sign Up </button>
+        </div>
+        <p class="last-content">
+          Already an User? <a  href="#" onclick="show('log-in');hide('signup');">Log In</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- log in -->
+    <div class="popup" id="log-in">
+      <i class="fas fa-times-circle" onclick="hide('log-in')"></i><br />
+      <h1 class="pop-heading" >Log In</h1>
+      <form class="pop-form-login" action="index.html" method="post">
+        <label for="email">Email id: </label>
+        <input type="email" id="loginemail" name="email" value="" placeholder="abc@gmail.com" required><br />
+
+        <label for="password">Password: </label>
+          <input type="password" id="loginpass" name="password" value="" required oninput="passwordvalidation">
+        <br />
+
+        <div class="button-submit">
+          <button class="btn-signup" type="submit" > Log In </button>
+        </div>
+        <p class="last-content">
+          Don't have an account? <a  href="#" onclick="show('signup');hide('log-in')">Sign up</a>
+        </p>
+      </form>
+    </div>
+    <!-- statement -->
+    <section class="about-us">
+      <div class="container">
+        <h1 class="heading-about">About Art By Threads</h1>
+        <div class="row about-row">
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <p class="about-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet luctus elit. Donec cursus turpis sed efficitur suscipit. Curabitur nulla augue, mollis nec faucibus at, porttitor et velit. Vivamus est orci, gravida in ornare a, euismod finibus mi. Vestibulum sit amet condimentum metus. Nunc lorem ex, facilisis vitae ipsum et, porttitor luctus turpis. Proin eleifend luctus magna eget hendreritneque. Pellentesque dignissim vestibulum elit quis scelerisque. Morbi imperdiet blandit justo, vel dapibus libero maximus mattis. Vestibulum faucibus nisl urna, ac pulvinar mi fringilla id. Nulla turpis urna, fermentum eget molestie at, suscipit et ex. Vestibulum facilisis felis mauris, eget lobortis purus elementum ut. Vivamus malesuada arcu nec nibh suscipit laoreet. In non sapien in velit mollis suscipit a eleifend augue. Morbi libero enim, mollis at libero eget, venenatis hendrerit turpis.</p>
+            </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <img class="d-block w-75"src="images/image5.jpg" alt="">
+          </div>
+        </div>
+        <div class="row about-row">
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <img class="d-block w-75"src="images/image6.jpg" alt="">
+          </div>
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <p class="about-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet luctus elit. Donec cursus turpis sed efficitur suscipit. Curabitur nulla augue, mollis nec faucibus at, porttitor et velit. Vivamus est orci, gravida in ornare a, euismod finibus mi. Vestibulum sit amet condimentum metus. Nunc lorem ex, facilisis vitae ipsum et, porttitor luctus turpis. Proin eleifend luctus magna eget hendrerit.orbi imperdiet blandit justo, vel dapibus libero maximus mattis. Vestibulum faucibus nisl urna, ac pulvinar mi fringilla id. Nulla turpis urna, fermentum eget molestie at, suscipit et ex. Vestibulum facilisis felis mauris, eget lobortis purus elementum ut. Vivamus malesuada arcu nec nibh suscipit laoreet. In non sapien in velit mollis suscipit a eleifend augue. Morbi libero enim, mollis at libero eget, venenatis hendrerit turpis. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <h1 id="contact" class="footer-title">Contact Us</h1>
+            <i class="fas fa-phone-alt foot-icon" style="color: #ffffff;float:left"></i>
+            <p class="footer-contents">+91 0000000000</p>
+            <i class="fa fa-envelope foot-icon"></i><a class="footer-contents" href = "mailto: abc@gmail.com">Mail</a>
+          </div>
+          <div class="col-4">
+            <h1 class="footer-title">Other</h1>
+            <div><a class="footer-contents">Shawl for Women</a></div>
+            <div><a class="footer-contents">Shawl for Men</a></div>
+            <div><a class="footer-contents">Saree</a></div>
+            <div><a class="footer-contents">Dupatta</a></div>
+          </div>
+          <div class="col-4">
+            <h1 class="footer-title">Keep In Touch</h1>
+            <i class="fab fa-twitter foot-icon"></i>
+            <i class="fab fa-facebook foot-icon"></i>
+            <i class="fab fa-instagram foot-icon"></i>
+            <i class="fab fa-whatsapp foot-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
