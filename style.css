@@ -11,7 +11,7 @@ a.footer-contents:hover{
 /* 1st row */
 .logo{
   width:25rem;
-  height:10rem;
+  height:auto;
 }
 .navigation-bar{
   text-align: center
@@ -20,6 +20,10 @@ a.footer-contents:hover{
   color: #15505A;
   font-size: 1.5rem;
 }
+.navbar-toggler-icon{
+  width: 3em !important;
+  height:3em !important;
+}
 nav{
   padding-left: 0px;
 }
@@ -27,9 +31,10 @@ nav{
 /* carousel */
 .testimonial-image{
   width:100%;
-  margin:20px;
 }
-
+.carousel{
+  margin:10px
+}
 /* about card */
 .about{
   padding-top: 3%;
@@ -157,9 +162,10 @@ nav{
   z-index: 20;
   border-radius: 25px;
 }
-
 .fa-times-circle{
   float:right;
+  width:16px;
+  height:16px;
 }
 .fa-times-circle:hover{
   filter: drop-shadow(1px 1px 2px #15505A);
@@ -203,26 +209,48 @@ label{
   font-size:0.8em;
   text-align:center;
 }
-
+.pop-heading{
+  margin-bottom: 10%;
+}
 @media (max-width:1000px) {
   .container{
     padding-left:5%;
     padding-right:5%;
 }
-  .about-image{
+.logo{
+  width:40rem;
+}
+  .heading-about,.heading,.pop-heading{
+    font-size:3rem;
+  }
+  .contents-index,.btnShop,.btn,.about-contents,.footer-title,.btn-signup{
+    font-size:1.8rem;
+  }
+.footer-contents,.last-content{
+  font-size: 1.2rem;
+}
+  .popup{
+    top:45%;
+    left:38%;
+  }
+  #signup label, #log-in label{
+    font-size:1.5rem;
+    width:150px;
+  }
+    #signup input, #log-in input{
+      font-size:1.5rem;
+    }
+    .fa-times-circle{
+      width:25px!important;
+      height:25px!important;
+    }
+.foot-icon{
+  margin-right:10%;
+  width:25px!important;
+  height:25px!important;
+}
+  .imageThread,.about-image{
     width:75%;
-  }
-  .about-img{
     text-align: center;
-  }
-  .heading-about,.heading{
-    font-size:2.5rem;
-  }
-
-  .about-contents{
-    font-size: 1.5rem;
-  }
-  .about-img img{
-    width:75%
   }
 }
