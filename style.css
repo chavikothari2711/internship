@@ -217,6 +217,9 @@ label{
     padding-left:5%;
     padding-right:5%;
 }
+  .nav-text-colour{
+    font-size: 2.5rem;
+  }
 .logo{
   width:40rem;
 }
